@@ -22,7 +22,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-
+import java.time.LocalDateTime;
 
 
 @RestController
@@ -37,10 +37,12 @@ import org.springframework.web.bind.annotation.*;
 public class AccountsController {
 
     private IAccountsService iAccountsService;
+    static int cnt = 0;
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hi World";
+        System.out.println(++cnt + ". Hello API hitted " + LocalDateTime.now());
+        return "Hello World";
     }
 
 
