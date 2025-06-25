@@ -1,6 +1,5 @@
 package com.eazybytes.loans.entity;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,22 +9,22 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cards extends BaseEntity {
+public class Loans extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cardId;
+    private Long loanId;
 
     private String mobileNumber;
 
-    private String cardNumber;
+    private String loanNumber;
 
-    private String cardType;
+    private String loanType;
 
-    private int totalLimit;
+    private int totalLoan;
 
-    private int amountUsed;
+    private int amountPaid;
 
-    private int availableAmount;
+    private int outstandingAmount;
 
 }
