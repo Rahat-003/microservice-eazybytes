@@ -34,6 +34,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 public class AccountsApplication {
 
     public static void main(String[] args) {
+        System.out.println("------- Hello World from Accounts microservice -------");
         SpringApplication.run(AccountsApplication.class, args);
     }
 
