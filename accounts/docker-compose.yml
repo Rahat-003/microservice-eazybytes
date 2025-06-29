@@ -1,0 +1,8 @@
+
+
+services:
+  accounts:
+    image: "rahat1722/accounts:section4"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
