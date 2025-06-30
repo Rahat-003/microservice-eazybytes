@@ -67,4 +67,18 @@ mvn compile jib:dockerBuild
 # Use buildpacks for creating images. Best option so far.
 
 
+# To run the images of docker-compose.yml
+# Following command will run all the containers in docker-compose.yml
+docker compose up -d
+
+# To stop and remove all the containers in docker-compose.yml
+docker compose down
+
+# To stop all the containers in docker-compose.yml
+docker compose stop
+
+# To start all the containers in docker-compose.yml
+docker compose start
+
+
 Last checked video: 50
