@@ -111,7 +111,7 @@
 				<version>3.3.2</version>
 				<configuration>
 						<to>
-							<image>rahat1722/${project.artifactId}:section4</image>
+							<image>rahat1722/${project.artifactId}:section6</image>
 						</to>
 				</configuration>
 			</plugin>
