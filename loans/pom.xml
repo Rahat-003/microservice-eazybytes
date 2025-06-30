@@ -98,6 +98,12 @@
 				<configuration>
 					<image>
 						<name>rahat1722/${project.artifactId}:section4</name>
+						<buildpacks>
+							<buildpack>gcr.io/paketo-buildpacks/java:latest</buildpack>
+						</buildpacks>
+						<env>
+							<BP_JVM_VERSION>21</BP_JVM_VERSION>
+						</env>
 					</image>
 					<excludes>
 						<exclude>
@@ -105,12 +111,6 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-					<buildpacks>
-						<buildpack>gcr.io/paketo-buildpacks/java:latest</buildpack>
-					</buildpacks>
-					<env>
-						<BP_JVM_VERSION>21</BP_JVM_VERSION>
-					</env>
 				</configuration>
 			</plugin>
 		</plugins>
