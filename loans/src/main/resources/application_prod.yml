@@ -1,0 +1,19 @@
+
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to EazyBank accounts related loans APIs"
+
+  contactDetails:
+    name: "David Warner - Product Specialist"
+    email: "warner@eazybank.com"
+
+  onCallSupport:
+    - "(777) 555-1234"
+    - "(777) 523-1345"
