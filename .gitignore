@@ -1,0 +1,25 @@
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Build output
+target/
+*/target/
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# VM crash logs
+hs_err_pid*
+
+# Secrets
+secrets/
+*.env
