@@ -30,7 +30,7 @@ spring:
 build:
   version: "3.0"
 
-accounts:
+cards:
   message: "Welcome to EazyBank cards related local APIs"
   contactDetails:
     name: "John Doe - Developer"
