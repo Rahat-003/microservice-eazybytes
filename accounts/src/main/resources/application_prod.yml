@@ -13,5 +13,5 @@ accounts:
     name: "David Warner - Product Specialist"
     email: "warner@eazybank.com"
   onCallSupport:
-    - (777) 555-1234
-    - (777) 523-1345
+    - "(777) 555-1234"
+    - "(777) 523-1345"

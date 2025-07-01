@@ -13,5 +13,5 @@ accounts:
     name: "Steve Smith - Tester"
     email: "smith@eazybank.com"
   onCallSupport:
-    - (666) 555-1234
-    - (666) 523-1345
+    - "(666) 555-1234"
+    - "(666) 523-1345"
