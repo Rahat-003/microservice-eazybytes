@@ -1,7 +1,6 @@
 package com.eazybytes.cards.controller;
 
 
-import com.eazybytes.accounts.dto.AccountsContactInfoDto;
 import com.eazybytes.cards.constants.CardsConstants;
 import com.eazybytes.cards.dto.CardsContactInfoDto;
 import com.eazybytes.cards.dto.CardsDto;
@@ -196,7 +195,7 @@ public class CardsController {
                     responseCode = "500",
                     description = "HTTP Status Internal Server Error",
                     content = @Content(
-                            schema = @Schema(implementation = com.eazybytes.accounts.dto.ErrorResponseDto.class)
+                            schema = @Schema(implementation = ErrorResponseDto.class)
                     )
             )
     })
@@ -221,7 +220,7 @@ public class CardsController {
                     responseCode = "500",
                     description = "HTTP Status Internal Server Error",
                     content = @Content(
-                            schema = @Schema(implementation = com.eazybytes.accounts.dto.ErrorResponseDto.class)
+                            schema = @Schema(implementation = ErrorResponseDto.class)
                     )
             )
     })
@@ -247,7 +246,7 @@ public class CardsController {
                     responseCode = "500",
                     description = "HTTP Status Internal Server Error",
                     content = @Content(
-                            schema = @Schema(implementation = com.eazybytes.accounts.dto.ErrorResponseDto.class)
+                            schema = @Schema(implementation = ErrorResponseDto.class)
                     )
             )
     })
