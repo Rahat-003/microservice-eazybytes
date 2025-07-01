@@ -253,6 +253,28 @@ public class AccountsController {
                 .body(environment.getProperty("MAVEN_HOME"));
     }
 
+
+
+
+
+
+    @Operation(
+            summary = "Get Contact Information",
+            description = "Get Contact Information that is installed into accounts microservice"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "HTTP STATUS OK"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status Internal Server Error",
+                    content = @Content(
+                            schema = @Schema(implementation = com.eazybytes.accounts.dto.ErrorResponseDto.class)
+                    )
+            )
+    })
     @GetMapping("/contact-info")
     public ResponseEntity<AccountsContactInfoDto> getContactInfo() {
         return ResponseEntity
