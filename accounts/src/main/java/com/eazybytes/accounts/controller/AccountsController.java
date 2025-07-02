@@ -18,6 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import jdk.jfr.ContentType;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -36,6 +37,7 @@ import java.time.LocalDateTime;
 @Validated
 //@RequestMapping("/api")
 //@AllArgsConstructor
+//@NoArgsConstructor
 @Tag(
         name = "CRUD REST APIs for Accounts in EazyBank",
         description = "CRUD REST APIs in EazyBank to CREATE, UPDATE, FETCH, DELETE account details"
@@ -271,7 +273,7 @@ public class AccountsController {
                     responseCode = "500",
                     description = "HTTP Status Internal Server Error",
                     content = @Content(
-                            schema = @Schema(implementation = com.eazybytes.accounts.dto.ErrorResponseDto.class)
+                            schema = @Schema(implementation = ErrorResponseDto.class)
                     )
             )
     })
