@@ -76,6 +76,13 @@
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+
+		<!-- spring-cloud-starter-bus-amqp is required for /actuator/busrefresh endpoint to work. -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+
     </dependencies>
 
 
