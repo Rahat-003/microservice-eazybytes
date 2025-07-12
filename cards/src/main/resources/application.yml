@@ -9,7 +9,6 @@ spring:
   profiles:
     active: "prod"
 
-
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -27,6 +26,7 @@ spring:
     show-sql: true
 
   config:
+#    import: "optional:configserver:http://localhost:8071/"
     import: "optional:configserver:http://localhost:8071/"
 
   rabbitmq:
@@ -35,3 +35,8 @@ spring:
     username: "guest"
     password: "guest"
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

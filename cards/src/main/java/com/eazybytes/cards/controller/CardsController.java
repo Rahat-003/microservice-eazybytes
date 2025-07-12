@@ -228,7 +228,7 @@ public class CardsController {
     public ResponseEntity<String> getJavaVersion() {
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(environment.getProperty("MAVEN_HOME"));
+                .body(environment.getProperty("JAVA_HOME"));
     }
 
 
