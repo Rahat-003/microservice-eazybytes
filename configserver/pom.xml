@@ -71,7 +71,7 @@
 				<version>3.4.1</version> <!-- Use latest stable -->
 				<configuration>
 					<to>
-						<image>rahat1722/${project.artifactId}:section6</image>
+						<image>rahat1722/${project.artifactId}:section7</image>
 					</to>
 				</configuration>
 			</plugin>

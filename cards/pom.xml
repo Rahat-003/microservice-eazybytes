@@ -68,11 +68,11 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.3</version>
 		</dependency>
 
 		<dependency>
@@ -136,7 +136,7 @@
 				<version>3.4.1</version> <!-- Use latest stable -->
 				<configuration>
 					<to>
-						<image>rahat1722/${project.artifactId}:section6</image>
+						<image>rahat1722/${project.artifactId}:section7</image>
 					</to>
 				</configuration>
 			</plugin>

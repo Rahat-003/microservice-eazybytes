@@ -89,3 +89,16 @@ hookdeck listen 8071 Source --path /monitor
 # for running rabbitmq before running config server
 docker run -d --hostname rabbitmq --name rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
 
+
+# For running postgres in docker and running 3 different databases in 3 different containers and port
+#docker run --name accountsDB -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=accountsDB -p 5432:5432 -d postgres
+#docker run --name loansDB -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=loansDB -p 5433:5432 -d postgres
+#docker run --name cardsDB -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=cardsDB -p 5434:5432 -d postgres
+
+# Use this command instead of above to run on the default postgres database inside pgadmin for different servers.
+docker run --name accountsDB -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=postgres -p 5432:5432 -d postgres
+docker run --name loansDB -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=postgres -p 5433:5432 -d postgres
+docker run --name cardsDB -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=postgres -p 5434:5432 -d postgres
+
+
+

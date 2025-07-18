@@ -2,6 +2,23 @@ services:
   network-deploy-service:
     networks:
       - eazybank
+
+  microservice-db-config:
+    extends:
+      service: network-deploy-service
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+
   microservice-base-config:
     extends:
       service: network-deploy-service
@@ -21,3 +38,6 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: qa
       SPRING_CONFIG_IMPORT: "configserver:http://configserver:8071/"
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1234
+
