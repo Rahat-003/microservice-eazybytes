@@ -26,8 +26,6 @@ services:
       resources:
         limits:
           memory: "700m"
-    environment:
-      SPRING_RABBITMQ_HOST: "rabbit"
 
   microservice-config-server-config:
     extends:
