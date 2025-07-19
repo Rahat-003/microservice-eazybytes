@@ -48,20 +48,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- spring-cloud-starter-bus-amqp is required for /actuator/busrefresh endpoint to work. -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-		</dependency>
-
-		<!-- spring-cloud-config-monitor is required for /actuator/refresh endpoint to work.
-			when a request is made to refresh the config, spring cloud config monitor will send a message to RabbitMQ
-			broker to refresh the config. -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-monitor</artifactId>
-		</dependency>
-
 	</dependencies>
 
 	<dependencyManagement>
