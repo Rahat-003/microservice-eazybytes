@@ -30,6 +30,12 @@ spring:
     import: "optional:configserver:http://localhost:8071/"
 
 management:
+  info:
+    env:
+      enabled: true
+    java:
+      enabled: true
+
   endpoints:
     web:
       exposure:
@@ -41,7 +47,7 @@ management:
 
 endpoints:
   shutdown:
-    enabled: true
+    access: unrestricted
 
   info:
     env:

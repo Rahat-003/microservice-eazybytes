@@ -2,12 +2,14 @@ server:
   port: 8090
 
 spring:
-
   application:
     name: "loans"
 
   profiles:
     active: "prod"
+
+  config:
+    import: "optional:configserver:http://localhost:8071/"
 
   datasource:
     url: jdbc:h2:mem:testdb
@@ -25,10 +27,13 @@ spring:
       ddl-auto: update
     show-sql: true
 
-  config:
-    import: "optional:configserver:http://localhost:8071/"
-
 management:
+  info:
+    env:
+      enabled: true
+    java:
+      enabled: true
+
   endpoints:
     web:
       exposure:
@@ -36,15 +41,7 @@ management:
 
   endpoint:
     shutdown:
-      enabled: true
-
-endpoints:
-  shutdown:
-    enabled: true
-
-  info:
-    env:
-      enabled: true
+      access: unrestricted
 
 eureka:
   instance:
